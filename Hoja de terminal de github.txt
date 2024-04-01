@@ -1,0 +1,165 @@
+Hoja de terminal de github:
+
+# Terminal Cheat Sheet
+
+pwd         # Imprimir un directorio de trabajo
+ls          # Ver los ultimos archivos del directorio
+cd          # Cambiar directorio
+~           # Inicio del directorio
+..          # Uno mas del directorio
+-           # Directorio previamente trabajado
+help        # Solicitar ayuda
+-h          # Solicitar ayuda
+--help      # Solicitar ayuda
+man         # Manual
+cat         # Generar el contenido de un archivo
+mkdir       # Crear un nuevo directorio
+open        # Abrir un archivo con el programa asociado, un directorio con Finder, o un URL con el navegador por defecto
+ps          # Enumerar todos los procesos en ejecución
+kill        # Concluir proceso en ejecucion
+rmd         # Borrar permanentemente el archivo
+rmdir       # Remover o quitar el directorio
+
+
+
+
+
+## Working with Git
+
+### Quick Start
+git clone <url> 					# Clone directory: Clonar el directorio
+git checkout -b <new-branch> 		# Create new local branch: Crear un una rama local nueva
+git push -u origin <new-branch> 	# Sync local branch with remote: Sincronizar rama local con la remota
+git checkout <branch> 				# Checkout branch: Chequear rama
+git push origin <branch> 			# Push branch to remote: Empujar rama a la remota
+
+git branch -d <branchname>   	# deletes local branch: Eliminar rama local
+git push origin :<branchname>	# deletes remote branch: Eliminar rama remota
+
+git subtree push --prefix docs origin gh-pages  # push docs as subtree to gh-pages: Empujar docs a la subrama a la paginas de gh
+
+
+
+### Clone Directory
+git clone <url>: Tener un clon del url
+
+
+
+### Create Project
+cd project/
+git init                    # initializes the repository: Iniciar el repositorio
+git add .                   # add those 'unknown' files: Agregar esos archivos desconocidos
+git commit                  # commit all changes, edit changelog entry: Confirmar todos los cambios, editar la entrada del registro de cambios
+git rm --cached <file>...   # ridiculously complicated command to undo, in case you forgot .gitignore: Comando ridiculamente complicado de deshacer, en caso de olvidar
+.gitignore
+
+
+### Branching and Merging
+git branch                          # show list of all branches (* is active): Enseñar las lista de todas las ramas
+git checkout -b linux-work          # create a new branch named "linux-work": Crear una nueva rama llamada "Linux-word"
+<make changes>
+git commit -a
+git checkout master                 # go back to master branch: Volver a la rama "Maestra"
+git merge linux-work                # merge changesets from linux-work (Git >= 1.5): Fusionar los cambios de linux-work
+git pull . linux-work               # merge changesets from linux-work (all Git versions): Fusionar los cambios de linux-word (todas las versiones de git)
+git branch -m <oldname> <newname>   # rename branch: Renombrar rama
+git branch -m <newname>             # rename current branch: Renombrar rama actual
+
+
+
+### Delete Project
+git branch -d <branchname>   	# deletes local branch: Eliminar rama local
+git push origin :<branchname>	# deletes remote branch: Eliminar rama remota
+git remote prune <branchname>	# update local/remote sync: Actualizar sincronizacion locar/remota
+
+
+
+### Merging Upstream
+:
+git remote -v 									# Get list of remote branches: Obtener lista de ramas remotas
+git remote add upstream <upstream github url>	# Add original as upstream:
+git remote -v 									# Check upstream: Chequear una correcion 
+
+git fetch upstream 								# Get original repo: Obtener el repositorio original 
+git checkout development						# Switch to main branch in local fork: Cambiar a la a la rama principal en la bifurcacion local
+git merge upstream/development					# Merge original with fork: Fusinar archivo original con la bifurcacion
+
+git diff --name-only | uniq | xargs subl		# Fix conflicts in Sublime Text: Solucionar los conflictos o problemas del sublime text
+
+
+
+### Importing Patches
+git apply < ../p/foo.patch:
+git commit -a:
+
+
+
+### Exporting Patches
+<make changes>
+git commit -a -m "commit message"
+git format-patch HEAD^  # creates 0001-commit-message.txt: Crear un texto de
+                        # (HEAD^ means every patch since one revision before the: Significa todos los parches o revisiones desde la ultima
+                        # tip of the branch, also known as HEAD): Tipo de rama, tambien conocido como cabeza o encabezado
+
+
+
+
+### Inspecting Revisions
+
+# inspect history visually
+gitk    # this opens a Tk window, and shows you how the revisions are connected: Esto abre una ventana de TK, y enseña como las revisiones estan conectadas
+
+# inspect history
+git log     # this pipes a log of the current branch into your PAGER: Esta opcion logea la rama actual en tu pager
+git log -p  # ditto, but append a patch after each commit message: Ditto pero aprehende un parche despues de que aparezca una mensaje
+
+# inspect a specific commit
+git show HEAD   # show commit info, diffstat and patch: Enseña la informacion comprometedora, diferencia y el parche
+                # of the tip of the current branch: El tip de la rama actual
+
+
+
+### Referring to Revisions
+
+# by name
+git log v1.0.0  # show history leading up to tag "v1.0.0": Enseña el historial con el tal "v1.0.0"
+git log master  # show history of branch "master": Enseña el historial de la rama "master"
+
+# relative to a name
+git show master^    # show parent to last revision of master: Enseña la causa de la ultima revision del master
+git show master~2   # show grand parent to tip of master: Enseña la gran parente de la causa
+git show master~3   # show great grand parent to tip of master (you get the idea): Enseña la super gran parente de la master, se entiende la idea XD
+
+# by output of "git describe"
+git show v1.4.4-g730996f    # you get this string by calling "git describe": Te da la cadena llamandola "Git descrito"
+
+# by hash (internally, all objects are identified by a hash)
+git show f665776185ad074b236c00751d666da7d1977dbe
+git show f665776    # a unique prefix is sufficient: Un unico prefijo es suficiente
+
+# tag a revision
+git tag v1.0.0                      # make current HEAD known as "v1.0.0": Crea el encabezado actual conocido como "v1.0.0"
+git tag interesting v1.4.4-g730996f # tag a specific revision (not HEAD): Señana una revision en especifico, no el encabezado
+
+
+
+### Comparing Revisions
+# diff between two branches
+git diff origin..master             # pipes a diff into PAGER: Señala un diferencia entre pager
+git diff origin..master > my.patch  # pipes a diff into my.patch: Señala una diferencia en mi.parche
+
+# get diffstat of uncommitted work
+git diff --stat HEAD
+
+
+
+
+## Sublime as default text editor
+cd ~
+mkdir bin
+ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+git config --global core.editor "subl -n -w"
+
+### If that's not working
+sudo rm -rf /usr/local/bin/subl
+sudo ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin

@@ -1,0 +1,154 @@
+Division:
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int numero1, numero2;
+    int division, residuo;
+
+    cout << "Ingrese el primer digito: ";
+    cin >> numero1;
+
+    cout << "Ingrese el segundo digito: ";
+    cin >> numero2;
+
+    if (numero2 != 0) {
+        division = numero1 / numero2;
+        residuo = numero1 % numero2;
+
+        cout << "El resultado de la division es: " << division << endl;
+        cout << "El residuo es: " << residuo << endl;
+    }
+    else {
+        cout << "No se puede dividir entre cero pls, que apenas si pude hacer esto." << endl;
+    }
+
+    return 0;
+}
+
+
+Suma y resta de digitos:
+
+#include <iostream>
+using namespace std;
+int main() {
+    int digito1, digito2, digito3;
+
+
+    cout << "Poner el 1er numero: ";
+    cin >> digito1;
+
+    cout << "Poner el 2do numero: ";
+    cin >> digito2;
+
+    cout << "Poner el 3er numero: ";
+    cin >> digito3;
+
+    int resultado = digito1 + digito2 - digito3;
+
+  
+   cout << "El resultado de sumar los primeros dos numeros y restar el 3ro es: " << resultado << std::endl;
+
+    return 0;
+}
+
+
+Imprimir un numero:
+
+#include <iostream>
+
+int main() {
+    using namespace std;
+    cout << "Este trabajo no es obligatorio, pero pueden hacerlo si gustan." << endl;
+
+    int numero;
+    cout << "Ingresa un numerillo: ";
+    cin >> numero;
+
+    if (true) {
+        std::cout << "El numero ingresado es: " << numero << endl;
+    }
+    else {
+        cout << "Holi uwu." << endl;
+    }
+
+    return 0;
+}
+
+
+
+Ingresar 5 numeros:
+
+#include <iostream>
+using namespace std;
+int main() {
+    int num1, num2, num3, num4, num5;
+
+    cout << "Ingrese el primer numero: ";
+    cin >> num1;
+    cout << "Ingrese el segundo numero: ";
+    cin >> num2;
+    cout << "Ingrese el tercer numero: ";
+    cin >> num3;
+    cout << "Ingrese el cuarto numero: ";
+    cin >> num4;
+    cout << "Ingrese el quinto numero: ";
+    cin >> num5;
+
+    int resultado1 = num1 - num5;
+    int resultado2 = num2 + num3 + num4;
+    int resultado_final = resultado1 * resultado2;
+
+   cout << "El resultado final es: " << resultado_final << std::endl;
+
+    return 0;
+
+
+Año bisiesto:
+
+#include <iostream>
+using namespace std;
+int main() {
+    int   año;
+     
+   cout << "Ingrese un año: ";
+   cin >> año;
+
+    if ((año % 4 == 0 && año % 100 != 0) || (año % 400 == 0)) {
+     cout << año << " es un año bisiesto." << endl;
+    }
+    else {
+     cout << año << " no es un año bisiesto." << endl;
+    }
+
+    return 0;
+}
+
+
+
+Dividiendo entre 3:
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int numero;
+
+    cout << "Ingresa un numero: ";
+    cin >> numero;
+
+    if (numero % 3 == 0) {
+      cout << "El numero es divisible exactamente por 3." << endl;
+    }
+    else {
+      cout << "El numero no es divisible exactamente por 3." << endl;
+    }
+
+    return 0;
+}
+
+
+
+
+

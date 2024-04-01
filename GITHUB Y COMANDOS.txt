@@ -1,0 +1,19 @@
+GITHUB Y COMANDOS:
+
+Repositorio publico para almacenar codigo. Puedes er utilizado en trabajos en equipo para acceder a codigo de anera remota.
+
+¿Que es una rama?
+
+Lugar propio donde se avanza el codigo y puede volver, a anexarse alcodigo principal.
+Puede llamarse Main/Develop o Master.
+
+¿Que es un comando?
+
+Pull: Para traer los cambios del repositorio
+Push: Para subir cambios al repositorio
+Commit: Para nombrar los cambios subidos
+Add: Añadir archivos nuevos al repositorio
+Status: Verificar estado de la rama y nuestro codigo
+Branch: Verificar en que rama estamos
+Checkout: Cambiar de rama
+

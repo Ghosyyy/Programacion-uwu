@@ -1,0 +1,100 @@
+Vocales:
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    char letra1, letra2, letra3;
+    int contadordevocales = 0;
+    string vocales = "";
+
+    cout << "Pon tu primera letra uwu: ";
+    cin >> letra1;
+    cout << "Ahora la segunda: ";
+    cin >> letra2;
+    cout << "Y ya la tercera porfis";
+    cin >> letra3;
+
+    
+    if (letra1 == 'a' || letra1 == 'e' || letra1 == 'i' || letra1 == 'o' || letra1 == 'u' ||
+        letra1 == 'A' || letra1 == 'E' || letra1 == 'I' || letra1 == 'O' || letra1 == 'U') {
+        contadordevocales++;
+        vocales += letra1;
+    }
+
+    
+    if (letra2 == 'a' || letra2 == 'e' || letra2 == 'i' || letra2 == 'o' || letra2 == 'u' ||
+        letra2 == 'A' || letra2 == 'E' || letra2 == 'I' || letra2 == 'O' || letra2 == 'U') {
+        contadordevocales++;
+        vocales += letra2;
+    }
+
+    
+    if (letra3 == 'a' || letra3 == 'e' || letra3 == 'i' || letra3 == 'o' || letra3 == 'u' ||
+        letra3 == 'A' || letra3 == 'E' || letra3 == 'I' || letra3 == 'O' || letra3 == 'U') {
+        contadordevocales++;
+        vocales += letra3;
+    }
+
+    
+    if (contadordevocales >= 2) {
+        cout << "hay dos vocales entre las letras ingresadas, y son: " << vocales << endl;
+    }
+    else {
+        cout << "no hay suficientes vocales" << endl;
+    }
+
+    return 0;
+}
+
+Calculadora de resistecias:
+#include <iostream>
+using namespace std;
+
+int main() {
+    float voltaje, intensidad, resistencia;
+
+    cout << "Ingresa tu voltaje: ";
+    cin >> voltaje;
+    cout << "Ingresa tu intensidad: ";
+    cin >> intensidad;
+
+  
+    resistencia = voltaje / intensidad;
+
+    if (resistencia < 1000) {
+        cout << "Tu resistencia es de: " << resistencia << " ohms" << endl;
+    }
+    else if (resistencia < 1000000) {
+        cout << "Tu resistencia es algo grande, es de: " << resistencia / 1000 << " K ohms" << endl;
+    }
+    else {
+        cout << "Muy buena resistencia, esta es de: " << resistencia / 1000000 << " M ohms" << endl;
+    }
+
+    return 0;
+}
+
+Año bisiesto:
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int anio;
+    cout << "Pon un anio a ver si es bisiesto o nel: ";
+    cin >> anio;
+
+    if ((anio % 4 == 0 && anio % 100 != 0) || (anio % 400 == 0)) {
+        cout << anio << " Si es anio bisiesto uwu" << endl;
+    }
+    else {
+        cout << anio << " no es bisiesto mano :c" << endl;
+    }
+
+    return 0;
+}
+
+
+
+

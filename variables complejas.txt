@@ -1,0 +1,73 @@
+Identificar el numero menor:
+
+#include <iostream>
+using namespace std;
+int main() {
+    int numero1, numero2;
+    cout << "Ingrese el 1er numero";
+    cin >> numero1;
+    cout << "Ingrese el 2do numero";
+    cin >> numero2;
+
+    if (numero1 > numero2) {
+    cout << "El numero 1 es mayor a 2"; 
+
+    }
+    else {
+        cout << "el numero 1 es menor que el numero 2";
+    }
+    return 0;
+        }
+
+
+Identificar si la frase o letra es la misma o no:
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string cadV;
+    string cadF;
+    cout << "Ingresar la frase hola";
+    cin >> cadV;
+    cout << "Ingresar la misma frase otra vez";
+    cin >> cadF;
+
+    if (cadV == cadF) {
+        cout << "Las frases son iguales uwu";
+    }
+    else {
+        cout << "No pusiste la misma frase unu";
+    }
+
+    return 0;
+}
+
+
+Ingresar si es el mismo numero o no:
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string cadV;
+    string cadF;
+    cout << "Ingresar un numero";
+    cin >> cadV;
+    cout << "Ingresar otro numero, si es igual mejor uwu";
+    cin >> cadF;
+
+    if (cadV == cadF) {
+        cout << "Los numeros son iguales";
+    }
+    else {
+        cout << "No pusiste los mismos numeros :c";
+    }
+
+    return 0;
+}
+
+
+

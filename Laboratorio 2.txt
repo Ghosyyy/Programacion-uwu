@@ -1,0 +1,77 @@
+Potenciar numero:
+#include <iostream>
+using namespace std;
+int main() {
+    int base, exponente, resultado = 1;
+
+    cout << "Pon el primer numero: ";
+    cin >> base;
+    cout << "Ahora el segundo numero: ";
+    cin >> exponente;
+
+    if (base > 10 || exponente > 10 || base < 1 || exponente < 1) {
+        cout << "Jefe, ponga un numero menor a 10 porfa." << endl;
+   
+    }
+    else {
+        for (int i = 0; i < exponente; ++i) {
+            resultado *= base;
+        }
+
+        cout << "El resultado de tu numero " << base << " elevado a la " << exponente << " es: " << resultado << endl;
+    }
+
+    return 0;
+}
+
+Divisor de numeros enteros:
+#include <iostream>
+using namespace std;
+int main() {
+    int numero, divisor = 1;
+
+    cout << "Ponga un numero entero: ";
+    cin >> numero;
+
+    cout << "Los divisores de " << numero << " son: ";
+    while (divisor <= numero) {
+        if (numero % divisor == 0) {
+            cout << divisor << " ";
+        }
+        divisor++;
+    }
+
+
+    return 0;
+}
+
+
+
+Factorial:
+#include <iostream>
+using namespace std;
+int main() {
+    int numero;
+    int contador = 1;
+    int factorial = 1;
+
+    cout << "Pon un numero entero porfi: ";
+    cin >> numero;
+
+    if (numero < 0) {
+        cout << "Pero que no sea negativo :c" << endl;
+    }
+    else {
+        while (contador <= numero) {
+            factorial *= contador;
+            ++contador;
+        }
+
+        cout << "El factorial de tu numero " << numero << " es: " << factorial << endl;
+    }
+
+    return 0;
+}
+
+
+

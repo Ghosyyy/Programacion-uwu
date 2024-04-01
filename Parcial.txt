@@ -1,0 +1,75 @@
+Ingresar la edad:
+
+#include <iostream>
+using namespace std;
+int main() {
+	int edad;
+
+	cout << "Ingresen su edad pls uwu" << endl;
+	cin >> edad;
+	 
+	cout << "La edad ingresada es:"  << edad;
+
+	return 0;
+}
+
+
+
+
+#include <iostream>
+using namespace std;
+int main() {
+	int numero1, numero2, suma, resta;
+
+	cout << "Ingresa un numerito jaj:";
+	cin >> numero1;
+	cout << "Ingresa el segundo numerito jiji:";
+	cin >> numero2;
+
+	int resultado;
+	resultado = numero1 + numero2;
+	cout << "El resultado de la suma es: " << resultado; 
+
+	resultado = numero1 - numero2;
+	cout << "El resultado de la resta es: " << resultado;
+
+
+	
+
+
+	return 0;
+}
+
+
+
+
+Numero positivo o negativo:
+
+#include <iostream>
+using namespace std;
+int main() {
+	   
+	int numero1;
+	
+	cout << "Ingrese el primer numero:";
+	cin >> numero1;
+	
+	if (numero1 >= 0) {
+		cout << "El numero que pusiste es positivo uwu";
+	}
+	else {
+		cout << "El numero que pusiste no es positivo aaaa";
+	}
+	
+
+
+	
+
+
+	return 0;
+}
+
+
+
+
+

@@ -1,0 +1,111 @@
+Promedio:
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num1, num2, num3, num4, num5;
+    cout << "Ingresa las 5 notas del estudiante:" << endl;
+    cout << "Nota 1: ";
+    cin >> num1;
+    cout << "Nota 2: ";
+    cin >> num2;
+    cout << "Nota 3: ";
+    cin >> num3;
+    cout << "Nota 4: ";
+    cin >> num4;
+    cout << "Nota 5: ";
+    cin >> num5;
+
+    int promedio = (num1 + num2 + num3 + num4 + num5) / 5;
+
+    if (promedio < 61) {
+        cout << "NO TIENE PERMITIDO HACER SU EXAMEN PRIVADO." << endl;
+    }
+    else if (promedio <= 75) {
+        cout << "SI REALIZA TRABAJO COMUNITARIO, PUEDE HACER SU EXAMEN PRIVADO." << endl;
+    }
+    else if (promedio <= 85) {
+        cout << "PROMEDIO NORMAL, PUEDE HACER SU EXAMEN PRIVADO." << endl;
+    }
+    else if (promedio <= 90) {
+        cout << "PROMEDIO ALTO, SI SE GRADUA SERA CON HONORES." << endl;
+    }
+    else if (promedio <= 95) {
+        cout << "PROMEDIO MUY ALTO, SI SE GRADUA SERA CON MAXIMOS HONORES." << endl;
+    }
+    else {
+        cout << "PUEDE EXONERARSE DE EXAMEN PRIVADO." << endl;
+    }
+
+    return 0;
+}
+
+Salario:
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    float salario, impuestos;
+    cout << "Ingrese su salario porfa: ";
+    cin >> salario;
+
+    if (salario <= 15000) {
+        impuestos = salario * 0.05;
+    }
+    else if (salario <= 30000) {
+        impuestos = salario * 0.12;
+    }
+    else {
+        impuestos = salario * 0.21;
+    }
+
+    cout << "El extra por impuestos son: " << impuestos << endl;
+
+    return 0;
+}
+
+Calculadora:
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    float cantidad;
+    int opcion;
+    cout << "Ingresa la cantidad a convertir: ";
+    cin >> cantidad;
+
+    cout << "Que quiere convertir: " << endl;
+    cout << "1. Kms a ms" << endl;
+    cout << "2. Ms a kms" << endl;
+    cout << "3. Pies a pulgadas" << endl;
+    cout << "4. Pulgadas a pies" << endl;
+    cout << "5. Kms a millas" << endl;
+    cout << "Opcion: ";
+    cin >> opcion;
+
+    if (opcion == 1) {
+        cout << cantidad << " kms son " << cantidad * 1000 << " metros." << endl;
+    }
+    else if (opcion == 2) {
+        cout << cantidad << " metros son " << cantidad / 1000 << " kms." << endl;
+    }
+    else if (opcion == 3) {
+        cout << cantidad << " pies son " << cantidad * 12 << " pulgadas." << endl;
+    }
+    else if (opcion == 4) {
+        cout << cantidad << " pulgadas son " << cantidad / 12 << " pies." << endl;
+    }
+    else if (opcion == 5) {
+        cout << cantidad << " kilometros son " << cantidad * 0.621371 << " millas." << endl;
+    }
+    else {
+        cout << "Esa opcion no es posible amigo :c" << endl;
+    }
+
+    return 0;
+}
+
+

@@ -1,0 +1,709 @@
+Comprar tenis:
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    char tenis;
+    cout << "Tienes suficiente dinero para comprar tenis? s/n: ";
+    cin >> tenis;
+
+    if (tenis == 's') {
+        cout << "Si le alcanza para comprar tenis" << endl;
+
+        cout << "Tipos de calzado disponibles: " << endl;
+        cout << "1. Deportivo" << endl;
+        cout << "2. Casual" << endl;
+        cout << "3. Formal" << endl;
+        cout << "4. Hogareño" << endl;
+        cout << "5. De trabajo" << endl;
+        cout << "Elige el tipo de calzado (1, 2, 3, 4 ,5): ";
+
+        char tipotenis;
+        cin >> tipotenis;
+
+        if (tipotenis == '1' || tipotenis == '2' || tipotenis == '3' || tipotenis == '4' || tipotenis == '5') {
+            cout << "Te gusta ese tipo de tenis? s/n: ";
+            char gusto;
+            cin >> gusto;
+
+            if (gusto == 's') {
+                cout << "Hay de su talla? s/n: ";
+                char talla;
+                cin >> talla;
+
+                if (talla == 's') {
+                    cout << "Disfruta tus nuevos tenis uwu" << endl;
+
+                    cout << "Quieres otro par de tenis? s/n: ";
+                    char otropar;
+                    cin >> otropar;
+
+                    if (otropar == 's') {
+                        main(); // Que se vuelva a repetir todo si quiere comprar otro par
+                    }
+                    else {
+                        cout << "Gracias por su compra owo" << endl;
+                    }
+                }
+                else {
+                    cout << "No hay de su talla" << endl;
+                }
+            }
+            else {
+                cout << "Seguir buscando" << endl;
+            }
+        }
+    }
+    else {
+        cout << "Usted es pobre y no tiene para los tenis :c" << endl;
+    }
+
+    return 0;
+}
+
+
+Comprar un nuevo telefono:
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    char telefono;
+    cout << "Si necesitas un nuevo telefono? s/n: ";
+    cin >> telefono;
+
+    if (telefono == 's') {
+        char dinero;
+        cout << "Te alcanza el dinero? s/n: ";
+        cin >> dinero;
+
+        if (dinero == 's') {
+            cout << "Si te alcanza wuuu" << endl;
+
+            cout << "Modelos disponibles: Samsung, iPhone, Xiaomi, Motorola, Huawei" << endl;
+            cout << "Cual modelo te gustaria uwu?: ";
+            string modelo;
+            cin >> modelo;
+
+            cout << "Nuevo o de segunda mano n/s: ";
+            string estado;
+            cin >> estado;
+
+            if (estado == "n" or estado == "s") {
+                cout << "En donde lo vas a comprar, tienda o marketplace   t/m: ";
+                string lugar;
+                cin >> lugar;
+
+
+            }
+            else {
+                cout << "Elegi un metodo de, pago cuotas o al contado: ";
+                string pago;
+                cin >> pago;
+            }
+
+            cout << "Si encontraste tu modelo? s/n: ";
+            char encontrado;
+            cin >> encontrado;
+
+            if (encontrado == 'n') {
+                main(); // Para que encuentre el telefono que quiere
+            }
+        }
+        else {
+            char vender;
+            cout << "Puedes vender algo para comprar el telefono? s/n";
+            cin >> vender;
+
+            if (vender == 's') {
+                main(); // Vende algo y ver si ahora si puede comprar el telefono
+            }
+            else {
+                cout << "No te lo puedes comprar :c, chaito" << endl;
+            }
+        }
+    }
+    else {
+        cout << "No necesitas un nuevo telefono, adios owo" << endl;
+    }
+
+    return 0;
+}
+
+Calculadora:
+
+#include <iostream>
+using namespace std;
+
+int op;
+
+int main(int argc, char *argv[]) {
+	cout<<"Bienvenido\n";
+	cout<<"Elija una opcion\n";
+	cout<<"1. Calculadora\n";
+	cout<<"2. Calculadora de Ohm\n";
+	cout<<"3. Comparador de numeros\n";
+	cout<<"4. Salir\n";
+	cin>>op;
+	if(op==1){
+		
+		int num1, num2, opcal, total;
+		cout<<"Eligio la calculadora\n";
+		cout<<"1. Suma\n";
+		cout<<"2. Resta\n";
+		cout<<"3. Multiplicacion\n";
+		cout<<"4. Division\n";
+		cout<<"5. Salir\n";
+		cin>>opcal;
+		
+		if(opcal==1){
+			cout<<"Ingrese el primer numero\n";
+			cin>>num1;
+			cout<<"Ingrese el segundo numero\n";
+			cin>>num2;
+			total=num1+num2;
+			cout<<"El total de la suma es: "<< total<<"\n";
+		}
+		else if(opcal==2){
+			cout<<"Ingrese el primer numero\n";
+			cin>>num1;
+			cout<<"Ingrese el segundo numero\n";
+			cin>>num2;
+			total=num1-num2;
+			cout<<"El total de la resta es: "<< total<<"\n";
+		}
+		else if(opcal==3){
+			cout<<"Ingrese el primer numero\n";
+			cin>>num1;
+			cout<<"Ingrese el segundo numero\n";
+			cin>>num2;
+			total=num1*num2;
+			cout<<"El total de la multiplicacion es: "<< total<<"\n";
+		}
+		else if(opcal==4){
+			cout<<"Ingrese el primer numero\n";
+			cin>>num1;
+			cout<<"Ingrese el segundo numero\n";
+			cin>>num2;
+			total=num1/num2;
+			cout<<"El total de la division es: "<< total<<"\n";
+		}
+		else if(opcal==5){
+			cout<<"Programa finalizado\n";
+		}
+	}
+	else if(op==2){
+		int opohm; 
+		float resistencia, voltaje, amperaje, respuesta;
+		cout<<"Eligio la calculadora de Ohm\n";
+		cout<<"1. Calcular Resitencia\n";
+		cout<<"2. Calcular Amperaje\n";
+		cout<<"3. Calcular Voltaje\n";
+		cout<<"4. Salir\n";
+		cin>>opohm;
+		if(opohm==1){
+			cout<<"Ingrese el voltaje\n";
+			cin>>voltaje;
+			cout<<"Ingrese el amperaje\n";
+			cin>>amperaje;
+			respuesta= voltaje/amperaje;
+			cout<<"El resultado de la resistencia es: "<<respuesta;
+		}
+		else if(opohm==2){
+			cout<<"Ingrese el voltaje\n";
+			cin>>voltaje;
+			cout<<"Ingrese el resistencia\n";
+			cin>>resistencia;
+			respuesta= voltaje/resistencia;
+			cout<<"El resultado del amperaje es: "<<respuesta;
+		}
+		else if(opohm==3){
+			cout<<"Ingrese el resistencia\n";
+			cin>>resistencia;
+			cout<<"Ingrese el amperaje\n";
+			cin>>amperaje;
+			respuesta= resistencia*amperaje;
+			cout<<"El resultado de la voltaje: "<<respuesta;
+		}
+		else if(opohm==4){
+			cout<<"Programa finalizado\n";
+		}
+	}
+	else if(op==3){
+		int opcomp, num1, num2;
+		cout<<"Eligio comparador de numeros\n";
+		cout<<"1. Verificar si los numero son iguales\n";
+		cout<<"2. Verificar si un numero es mayor\n";
+		cout<<"3. Salir\n";
+		cin>>opcomp;
+		if(opcomp==1){
+			cout<<"Ingrese el primer numero\n";
+			cin>>num1;
+			cout<<"Ingrese el segundo numero\n";
+			cin>>num2;
+			if(num1==num2){
+				cout<<"los numero si son iguales\n";
+			}
+			else{
+				cout<<"los numero no son iguales\n";
+			}
+		}
+		else if(opcomp==2){
+			cout<<"Ingrese el primer numero\n";
+			cin>>num1;
+			cout<<"Ingrese el segundo numero\n";
+			cin>>num2;
+			if(num1<num2){
+				cout<<"el segundo numero ingresado es mayor\n";
+			}
+			else if(num2<num1){
+				cout<<"el primer numero ingresado es mayor\n";
+			}
+		}
+		else if(opcomp==3){
+			cout<<"Programa Finalizado\n";
+		}
+		
+		
+	}
+	else if(op==4){
+		cout<<"Programa finalizado\n";
+	}
+	
+	return 0;
+}
+
+Comprar un helado:
+
+include <iostream>
+#include <string>
+#include <windows.h>
+using namespace std;
+void sabores (string helado) {
+	cout << "1. Vainilla"<<endl;
+	cout << "2.Fresa"<<endl;
+	cout << "3.Chocolate"<<endl;
+	cout << "4.Galleta"<<endl;
+	cout << "5.Chicle"<<endl;
+	string sabor;
+	cin >> sabor;
+	string type = helado;
+	cout << "Se le prepara un " << type << " de " << sabor;
+}
+ string banana (string helado){
+	 string sabor;
+	 cout << "Que sabor quiere?"<< endl;
+	 cout << "1. Vainilla"<<endl;
+	 cout << "2.Fresa"<<endl;
+	 cout << "3.Chocolate"<<endl;
+	 cout << "4.Galleta"<<endl;
+	 cout << "5.Chicle"<<endl;
+	cin >> sabor;
+	 string type = helado;
+	 string textoF = helado+sabor+" ";
+	 return textoF;
+	 
+ }
+void frutas (string helado) {
+	cout << "1. Coco"<<endl;
+	cout << "2.Fresa"<<endl;
+	cout << "3.Higo"<<endl;
+	string sabor;
+	getline (cin, sabor);
+	string type = helado;
+	cout << "Se le prepara un " << type << " de " << sabor;
+}
+	
+int main(int argc, char *argv[]) {
+	cout << "Hola usuario"<<endl;
+	Sleep (1000);
+	cout << " Qu  tipo de helado quiere? (seleccione el numero de opcion)"<<endl;
+		int helado;
+	cout << "1. Sundae"<<endl;
+	cout << "2.Banana split"<<endl;
+	cout << "3.Cono"<<endl;
+	cout << "4.Yougurth"<<endl;
+	cout << "5.Paleta"<<endl;
+	cin >> helado;
+	if (helado == 1) {
+		cout << " Que sabor de helado quiere?"<<endl;
+		Sleep (1000);
+		sabores ("sundae");
+	}else if (helado ==2) {
+		Sleep(1000);
+			string textob="Los sabores de las bolas de helado son: ";
+			for (int ba = 1 ; ba <=3 ; ba++) { 
+				textob = banana (textob);
+					
+					
+			}
+			cout << textob;
+	}if (helado ==3){
+		cout <<" De que tama o desea el cono? (Responda con el n mero de la opci n)"<< endl;
+		cout << "1.Grande"<< endl;
+		cout << "2.Mediano"<< endl;
+		cout <<"3.Peque o"<< endl;
+		int tamano;
+		cin >> tamano;
+		if (tamano == 1 || tamano == 2 || tamano == 3){
+			cout << "Cuantas bolas de helado desea?";
+			int bolashelado;
+			cin>> bolashelado;
+			string textob="Los sabores de las bolas de helado son: ";
+			for (int ba = 1 ; ba <=bolashelado ; ba++) { 
+				textob = banana (textob);
+			} cout << textob;
+		}
+	}if (helado ==4){
+		cout <<"De que tama o lo desea?"<< endl;
+		cout << "1. 12 oz"<< endl;
+		cout << "2. 8 oz"<< endl;
+		int onzas;
+		cin >>onzas;
+		frutas ("yougurth");
+	}if (helado == 5){
+		cout << " De que tipo quiere la paleta?"<< endl;
+		cout << "1.Cremosa"<< endl;
+		cout << "2.Hielo"<< endl;
+		int paleta;
+		cin >> paleta;
+		cout <<" De que sabor quiere su paleta?"<< endl;
+		sabores ("paleta");
+		
+	}
+	return 0;
+} 
+
+
+Comprar una computadora:
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char *argv[]) {
+	cout << "Tiene dinero? responda con S o N"<< endl;
+	char letra;
+	cin >> letra;
+	letra = toupper(letra);
+		if (letra == 'S') {
+			cout << "¿Qué computadora necesito? (Responda con el numero de la opcIon)"<< endl;
+			cout << "1. Escritorio"<< endl;
+			cout << "2.Laptop"<<endl;
+			int compu;
+			cin >> compu;
+			if (compu == 1 || compu == 2) {
+				cout << "¿Para que quiero la computadora?"<<endl;
+			}cout << "1. Jugar"<<endl;
+			cout << "2. Estudio"<< endl;
+			cout << "3. Trabajo"<< endl;
+			int uso;
+			cin >> uso;
+			if (uso == 1 || uso == 2 || uso == 3){
+				cout << "Tiene que ver opciones"<<endl;
+				cout << "Consiguo computadora? (Responda con S o N)"<< endl;
+				char tener;
+				cin >> tener;
+				tener = toupper(tener) ;
+				if (tener == 'S') {
+					cout << " Ir a comprar la computadora";
+				}else if (tener == 'N'){
+						cout << "Volver a ver opciones"<<endl;
+						char tener;
+						cout << "Consiguo computadora? (Responda con S o N)"<< endl;
+						cin >> tener;
+						tener = toupper(tener) ;
+						if (tener == 'S') {
+							cout << " Ir a comprar la computadora";
+						}else {
+								cout << "Volver a ver opciones";
+					}
+				}
+			}
+			else {
+				cout << "No se sabe el uso de la computadora";
+			}
+		}else {
+				cout << "No es posible comprarse una computadora";
+			
+		}
+	
+	return 0;
+}
+
+Elegir una carrera:
+
+#include <iostream>
+using namespace std;
+
+int op;
+int main(int argc, char *argv[]) {
+	cout<<"elegir carrera\n";
+	cout<<"1. Ingenieria\n";
+	cout<<"2. Medicina\n";
+	cout<<"3. Licenciatura\n";
+	cout<<"4. Salir\n";
+	cin>>op;
+	if(op==1){
+		int opu;
+		cout<<"elejio Ingenieria\n";
+		cout<<"elija una Universidad\n";
+		cout<<"1. Mesoamericana\n";
+		cout<<"2. Mariano\n";
+		cout<<"3. San carlos\n";
+		cout<<"4. Salir\n";
+		cin>>opu;
+		if(opu==1){
+			char admi;
+			cout<<"elejio mesoamericana\n";
+			cout<<"usted gano el examen de admision y entrevista s/n \n";
+			cin>>admi;
+				if(admi=='s' || admi=='S')
+			{
+				char inscrip;
+				cout<<"Felicidades usted ingreso a Universidad Mesoamericana\n";
+				cout<<"Desea continuar con el proceso de inscripcion s/n \n";
+				cin>>inscrip;
+				if(inscrip=='s' || inscrip=='S'){
+					cout<<"Felicidades usted esta inscrito Universidad Mesoamericana\n";
+				}
+				else if (inscrip=='n' || inscrip=='N'){
+					cout<<"Busque otra Universidad\n";
+				}
+				
+			}
+				else if(admi=='n' || admi=='N'){
+					cout<<"Busque otra Universidad\n";
+				}
+		}
+		else if(opu==2){
+			char admi;
+			cout<<"elejio a Universidad Mariano\n";
+			cout<<"usted gano el examen de admision y entrevista s/n \n";
+			cin>>admi;
+				if(admi=='s' || admi=='S')
+			{
+				char inscrip;
+				cout<<"Felicidades usted ingreso a Universidad Mariano\n";
+				cout<<"Desea continuar con el proceso de inscripcion s/n \n";
+				cin>>inscrip;
+				if(inscrip=='s' || inscrip=='S'){
+					cout<<"Felicidades usted esta inscrito Universidad Mariano\n";
+				}
+				else if (inscrip=='n' || inscrip=='N'){
+					cout<<"Busque otra Universidad\n";
+				}
+				
+			}
+				else if(admi=='n' || admi=='N'){
+					cout<<"Busque otra Universidad\n";
+				}
+		}
+		else if(opu==3){
+			char admi;
+			cout<<"elejio Universidad San carlos\n";
+			cout<<"usted gano el examen de admision y entrevista s/n \n";
+			cin>>admi;
+				if(admi=='s' || admi=='S')
+			{
+				char inscrip;
+				cout<<"Felicidades usted ingreso a Universidad San carlos\n";
+				cout<<"Desea continuar con el proceso de inscripcion s/n \n";
+				cin>>inscrip;
+				if(inscrip=='s' || inscrip=='S'){
+					cout<<"Felicidades usted esta inscrito Universidad San carlos\n";
+				}
+				else if (inscrip=='n' || inscrip=='N'){
+					cout<<"Busque otra Universidad\n";
+				}
+				
+			}
+				else if(admi=='n' || admi=='N'){
+					cout<<"Busque otra Universidad\n";
+				}
+		}
+		else if(opu==4){
+			cout<<"usted salio\n";
+		}
+		
+	}
+	else if(op==2){
+		int opu;
+		cout<<"elejio medicina\n";
+		cout<<"elija una Universidad\n";
+		cout<<"1. Mesoamericana\n";
+		cout<<"2. Mariano\n";
+		cout<<"3. San carlos\n";
+		cout<<"4. Salir\n";
+		cin>>opu;
+		if(opu==1){
+			char admi;
+			cout<<"elejio mesoamericana\n";
+			cout<<"usted gano el examen de admision y entrevista s/n \n";
+			cin>>admi;
+				if(admi=='s' || admi=='S')
+			{
+				char inscrip;
+				cout<<"Felicidades usted ingreso a Universidad Mesoamericana\n";
+				cout<<"Desea continuar con el proceso de inscripcion s/n \n";
+				cin>>inscrip;
+				if(inscrip=='s' || inscrip=='S'){
+					cout<<"Felicidades usted esta inscrito Universidad Mesoamericana\n";
+				}
+				else if (inscrip=='n' || inscrip=='N'){
+					cout<<"Busque otra Universidad\n";
+				}
+				
+			}
+				else if(admi=='n' || admi=='N'){
+					cout<<"Busque otra Universidad\n";
+				}
+		}
+		else if(opu==2){
+			char admi;
+			cout<<"elejio a Universidad Mariano\n";
+			cout<<"usted gano el examen de admision y entrevista s/n \n";
+			cin>>admi;
+				if(admi=='s' || admi=='S')
+			{
+				char inscrip;
+				cout<<"Felicidades usted ingreso a Universidad Mariano\n";
+				cout<<"Desea continuar con el proceso de inscripcion s/n \n";
+				cin>>inscrip;
+				if(inscrip=='s' || inscrip=='S'){
+					cout<<"Felicidades usted esta inscrito Universidad Mariano\n";
+				}
+				else if (inscrip=='n' || inscrip=='N'){
+					cout<<"Busque otra Universidad\n";
+				}
+				
+			}
+				else if(admi=='n' || admi=='N'){
+					cout<<"Busque otra Universidad\n";
+				}
+		}
+		else if(opu==3){
+			char admi;
+			cout<<"elejio Universidad San carlos\n";
+			cout<<"usted gano el examen de admision y entrevista s/n \n";
+			cin>>admi;
+				if(admi=='s' || admi=='S')
+			{
+				char inscrip;
+				cout<<"Felicidades usted ingreso a Universidad San carlos\n";
+				cout<<"Desea continuar con el proceso de inscripcion s/n \n";
+				cin>>inscrip;
+				if(inscrip=='s' || inscrip=='S'){
+					cout<<"Felicidades usted esta inscrito Universidad San carlos\n";
+				}
+				else if (inscrip=='n' || inscrip=='N'){
+					cout<<"Busque otra Universidad\n";
+				}
+				
+			}
+				else if(admi=='n' || admi=='N'){
+					cout<<"Busque otra Universidad\n";
+				}
+		}
+		else if(opu==4){
+			cout<<"usted salio\n";
+		}
+	}
+	else if(op==3){
+		int opu;
+		cout<<"elejio Licenciatura\n";
+		cout<<"elija una Universidad\n";
+		cout<<"1. Mesoamericana\n";
+		cout<<"2. Mariano\n";
+		cout<<"3. San carlos\n";
+		cout<<"4. Salir\n";
+		cin>>opu;
+		if(opu==1){
+			char admi;
+			cout<<"elejio mesoamericana\n";
+			cout<<"usted gano el examen de admision y entrevista s/n \n";
+			cin>>admi;
+				if(admi=='s' || admi=='S')
+			{
+				char inscrip;
+				cout<<"Felicidades usted ingreso a Universidad Mesoamericana\n";
+				cout<<"Desea continuar con el proceso de inscripcion s/n \n";
+				cin>>inscrip;
+				if(inscrip=='s' || inscrip=='S'){
+					cout<<"Felicidades usted esta inscrito Universidad Mesoamericana\n";
+				}
+				else if (inscrip=='n' || inscrip=='N'){
+					cout<<"Busque otra Universidad\n";
+				}
+				
+			}
+				else if(admi=='n' || admi=='N'){
+					cout<<"Busque otra Universidad\n";
+				}
+		}
+		else if(opu==2){
+			char admi;
+			cout<<"elejio a Universidad Mariano\n";
+			cout<<"usted gano el examen de admision y entrevista s/n \n";
+			cin>>admi;
+				if(admi=='s' || admi=='S')
+			{
+				char inscrip;
+				cout<<"Felicidades usted ingreso a Universidad Mariano\n";
+				cout<<"Desea continuar con el proceso de inscripcion s/n \n";
+				cin>>inscrip;
+				if(inscrip=='s' || inscrip=='S'){
+					cout<<"Felicidades usted esta inscrito Universidad Mariano\n";
+				}
+				else if (inscrip=='n' || inscrip=='N'){
+					cout<<"Busque otra Universidad\n";
+				}
+				
+			}
+				else if(admi=='n' || admi=='N'){
+					cout<<"Busque otra Universidad\n";
+				}
+		}
+		else if(opu==3){
+			char admi;
+			cout<<"elejio Universidad San carlos\n";
+			cout<<"usted gano el examen de admision y entrevista s/n \n";
+			cin>>admi;
+				if(admi=='s' || admi=='S')
+			{
+				char inscrip;
+				cout<<"Felicidades usted ingreso a Universidad San carlos\n";
+				cout<<"Desea continuar con el proceso de inscripcion s/n \n";
+				cin>>inscrip;
+				if(inscrip=='s' || inscrip=='S'){
+					cout<<"Felicidades usted esta inscrito Universidad San carlos\n";
+				}
+				else if (inscrip=='n' || inscrip=='N'){
+					cout<<"Busque otra Universidad\n";
+				}
+				
+			}
+				else if(admi=='n' || admi=='N'){
+					cout<<"Busque otra Universidad\n";
+				}
+		}
+		else if(opu==4){
+			cout<<"usted salio\n";
+		}
+	}
+	else if(op==4){
+		cout<<"Usted salio";
+	}
+
+	
+	return 0;
+}
+
+
+
+
+
+
+

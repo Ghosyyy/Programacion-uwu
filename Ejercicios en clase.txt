@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+int main(int argc, char *argv[]) {
+	//ES ingresar cantidad de curso 
+	
+	cout << " ingrese cantidad de curso: ";
+	int curso;
+	cin >> curso;
+	if (curso == 5)
+	{
+		cout << "Primer semestre ";
+	} 
+	if (curso  >= 8)
+	{
+		cout << "No se sabe el semestre ";
+	}
+	return 0;
+
+
+
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+int main(int argc, char *argv[]) {
+	//fecha de nacimiento 
+	
+	cout << " ingrese cuando nacio : ";
+	int siglo;
+	cin >> siglo ;
+	if (siglo  <= 1999)
+	{
+		cout << "siglo 20 ";
+	} 
+	if (siglo  >= 2000)
+	{
+		cout << "siglo 21 ";
+	}
+	return 0;
+}

@@ -1,0 +1,120 @@
+Operacion matematica
+
+#include <iostream>
+using namespace std;
+
+int main(int argc, char* argv[]) {
+	int numero1;
+	int numero2;
+	cout << "Ingrese un 1er numero: ";
+	cin >> numero1;
+	cout << "Ingrese 2do numero:  ";
+	cin >> numero2;
+
+	int resultado;
+	resultado = numero1 * numero2;
+	cout << "El resultado es: " << resultado;
+
+	return 0;
+}
+
+
+
+
+Ingresar Nombre completo:
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+	string nombre;
+	cout << "Ingresar el nombre completo:";
+	cin >> nombre;
+	cout << "Su nombre completo es:" << nombre;
+
+	return 0;
+
+}
+
+
+
+
+Verdadero o falso:
+
+#include <iostream>
+
+using namespace std;
+int main() {
+	bool S = true;
+	char letra;
+
+	cout << "Ingrese S u N";
+	cin >> letra;
+	if (letra == S){
+		cout << "Usted ingreso S";
+	S = true;
+}
+	 else {
+		 cout << "Usted ingreso N";
+		 S = false;
+			}
+}
+
+
+
+
+
+Calcular un circulo:
+
+#include <iostream>
+
+using namespace std;
+int main() {
+	double radio;
+	cout << "Ingresar el radio para calcular su circulo:";
+	cin >> radio;
+	
+	double pi = 3.1415592837183;
+	double area;
+	
+	area = pi * (radio * radio);
+	cout << "El area es:" << area;
+
+	return 0;
+			
+}
+
+
+
+Numero primo, si o no 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int numeroprimo;
+    cout << "Ingresar un numero para ver si es primo o no: ";
+    cin >> numeroprimo;
+
+    bool Primo1 = numeroprimo > 1;
+
+    for (int i = 2; i * i <= numeroprimo; i++) {
+        if (numeroprimo % i == 0) {
+            Primo1 = false;
+            break;
+        }
+    }
+
+    if (Primo1) {
+        cout << numeroprimo << " es primo." << endl;
+    }
+    else {
+        cout << numeroprimo << " no es primo." << endl;
+    }
+
+    return 0;
+}
+
+
+

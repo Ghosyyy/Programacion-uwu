@@ -1,0 +1,18 @@
+// ejercicio 3.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#include <iostream>
+using namespace std;
+
+int main(int argc, char* argv[]) {
+	int numero;
+	cout << "Debe ingresar un numero par o impar:";
+	cin >> numero;
+	if (numero % 2 == 0) {
+		cout << "El numero es par ";
+	}
+	else {
+		cout << "El numero es impar ";
+	}
+	return 0;
+}
