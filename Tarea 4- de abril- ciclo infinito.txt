@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main(int argc, char* argv[]) {
+	int control = 1;
+
+	do {;
+		cout << endl << "¿Quieres repetir el ciclo o nel? 1. Si, 2. Nel";
+		cin >> control;
+	} while (control == 1);
+	cout << "Salimos del ciclo";
+	return 0;
+}

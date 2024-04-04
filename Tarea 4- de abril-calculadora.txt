@@ -1,0 +1,51 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    char operador;
+    float num1, num2;
+    bool continuar = true;
+    char respuesta;
+
+    while (continuar) {
+        cout << "Ingrese la operacion que quieres realizar (+, -, *, /): ";
+        cin >> operador;
+        cout << "Pon el primer numero: ";
+        cin >> num1;
+        cout << "Pon el segundo numero: ";
+        cin >> num2;
+
+        switch (operador) {
+        case '+':
+            cout << "El resultado de la suma es: " << num1 + num2 << endl;
+            break;
+        case '-':
+            cout << "El resultado de la resta es: " << num1 - num2 << endl;
+            break;
+        case '*':
+            cout << "El resultado de la multiplicacion es: " << num1 * num2 << endl;
+            break;
+        case '/':
+            if (num2 != 0) {
+                cout << "El resultado de la division es: " << num1 / num2 << endl;
+            }
+            else {
+                cout << "No se pude dividir por 0 :c " << endl;
+            }
+            break;
+        default:
+            cout << "Sigue las instrucciones porfa, no pongas un operador invalido, solo los que estan aca (+, -, *, /)." << endl;
+        }
+
+        cout << "¿Quieres continuar o hacer alguna otra operacion? (s/n): ";
+        cin >> respuesta;
+        if (respuesta != 's') {
+            continuar = false;
+        }
+    }
+
+    return 0;
+}
+
+
