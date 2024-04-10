@@ -1,0 +1,21 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+string palabras(string palabra1, string palabra2) {
+    return palabra1 + palabra2;
+}
+
+int main() {
+    string palabra1, palabra2;
+
+    cout << "Ingresa la primera palabra: ";
+    cin >> palabra1;
+    cout << "Ingresa la segunda palabra: ";
+    cin >> palabra2;
+    string resultado = palabras(palabra1, palabra2);
+    cout << "Palabras unidas: " << resultado << endl;
+
+
+    return 0;
+}
