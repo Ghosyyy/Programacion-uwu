@@ -1,0 +1,59 @@
+#include <iostream>
+using namespace std;
+
+void msj1() {
+    cout << "Buenas noches" << endl;
+}
+
+void msj2() {
+    cout << "Un valorant o como" << endl;
+}
+
+void msj3() {
+    cout << "Quiero dormir ayuda" << endl;
+}
+
+void msj4() {
+    cout << "Tengo demasiado sueño" << endl;
+}
+
+void msj5() {
+    cout << "Salir del programa" << endl;
+}
+
+int main() {
+    int opcion;
+
+    do {
+        cout << "1. opcion" << endl;
+        cout << "2. opcion" << endl;
+        cout << "3. opcion" << endl;
+        cout << "4. opcion" << endl;
+        cout << "5. opcion" << endl;
+        cout << "Elegi una opcion: ";
+        cin >> opcion;
+
+        switch (opcion) {
+        case 1:
+            msj1();
+            break;
+        case 2:
+            msj2();
+            break;
+        case 3:
+            msj3();
+            break;
+        case 4:
+            msj4();
+            break;
+        case 5:
+            msj5();
+            break;
+        default:
+            cout << "Ponga algo valido jefe" << endl;
+            break;
+        }
+    } while (opcion != 5);
+
+    return 0;
+}

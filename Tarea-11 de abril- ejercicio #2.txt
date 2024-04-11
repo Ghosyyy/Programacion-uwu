@@ -1,0 +1,58 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+int pedirnumero() {
+    int numero;
+    cout << "Ingresa cualquier numero: ";
+    cin >> numero;
+    return numero;
+}
+
+string pedirpalabra() {
+    string palabra;
+    cout << "Ingresa alguna palabra: ";
+    cin >> palabra;
+    return palabra;
+}
+
+char pedirletra() {
+    char letra;
+    cout << "Pon cualquier letra: ";
+    cin >> letra;
+    return letra;
+}
+
+int main() {
+    char opcion;
+
+    do {
+        cout << "Menu:\n";
+        cout << "1. Pedir un numero\n";
+        cout << "2. Pedir una palabra\n";
+        cout << "3. Pedir una letra\n";
+        cout << "4. Salir\n";
+        cout << "Selecciona una opcion (1-4): ";
+        cin >> opcion;
+
+        switch (opcion) {
+        case '1':
+            cout << "Tu numerito es: " << pedirnumero() << endl;
+            break;
+        case '2':
+            cout << "Tu palabrita es: " << pedirpalabra() << endl;
+            break;
+        case '3':
+            cout << "Tu letrita es: " << pedirletra() << endl;
+            break;
+        case '4':
+            cout << "Chao owo";
+            break;
+        default:
+            cout << "Pero pon un numero de la lista, jefe, no uno random :c ";
+        }
+    } while (opcion != '4');
+
+    return 0;
+}
