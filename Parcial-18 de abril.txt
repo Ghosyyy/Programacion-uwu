@@ -1,0 +1,120 @@
+#include <iostream>
+
+using namespace std;
+
+void hipotenusa() {
+    double opuesto, adyacente;
+    cout << "Pon el lado opuesto jefe: ";
+    cin >> opuesto;
+    cout << "Ahora el lado adyacente por favor: ";
+    cin >> adyacente;
+
+    float hipotenusa = sqrt(opuesto * opuesto + adyacente * adyacente);
+    cout << "Tu hipotenusa es: " << hipotenusa << endl;
+
+    char repetir;
+    cout << "repetimos? (s/n): ";
+    cin >> repetir;
+    if (repetir == 's' || repetir == 'S') {
+        return;
+    }
+}
+
+void angulo() {
+    double angulo1, angulo2;
+    cout << "Pon el primer angulo que tienes (En grados por favor): ";
+    cin >> angulo1;
+    cout << "Ahora el segundo: ";
+    cin >> angulo2;
+
+    double faltante = 180 - angulo1 - angulo2;
+    cout << "El angulo que falta son: " << faltante << " grados" << endl;
+
+    char repetir;
+    cout << "te gustaria repetir o hacer otra operacion? (s/n): ";
+    cin >> repetir;
+    if (repetir == 's' || repetir == 'S') {
+        return;
+    }
+}
+
+void factorial() {
+    int numero;
+    cout << "Pon un numero para calcular su factorial (que no sea gigante sino explota la compu): ";
+    cin >> numero;
+
+    int factorial = 1;
+    for (int i = 1; i <= numero; ++i) {
+        factorial *= i;
+    }
+
+    cout << "El factorial de " << numero << " es: " << factorial << endl;
+
+    char repetir;
+    cout << "repetimos o nel (s/n): ";
+    cin >> repetir;
+    if (repetir == 's' || repetir == 'S') {
+        return;
+    }
+}
+
+void pisto() {
+    double billetes, gastado;
+    cout << "¿Cuantos billetes diste?: ";
+    cin >> billetes;
+    cout << "¿Cuanto gastaste?: ";
+    cin >> gastado;
+
+    if (gastado > billetes) {
+        cout << "La cantidad gastada es mayor que los billetes que diste, por favor completa el pisto" << endl;
+    }
+    else {
+        double vuelto = billetes - gastado;
+        cout << "El vuelto es: " << vuelto << endl;
+    }
+
+    char repetir;
+    cout << "Repetimos o como jefe (s/n): ";
+    cin >> repetir;
+    if (repetir == 's' || repetir == 'S') {
+        return;
+    }
+}
+
+int main() {
+    char opcion;
+    do {
+        system("cls");
+        cout << "===== Menu ====:" << endl;
+        cout << "1. = Calcular hipotenusa = " << endl;
+        cout << "2. == Calcular el ángulo faltante ==" << endl;
+        cout << "3. === Calcular el factorial === " << endl;
+        cout << "4. ==== Calcular el vuelto ====" << endl;
+        cout << "5. chao menu (salir)" << endl;
+        cout << "Elige cualquier opcion que necesites: ";
+        cin >> opcion;
+
+        switch (opcion) {
+        case '1':
+            hipotenusa();
+            break;
+        case '2':
+            angulo();
+            break;
+        case '3':
+            factorial();
+            break;
+        case '4':
+            pisto();
+            break;
+        case '5':
+            cout << "Chaito " << endl;
+            break;
+        default:
+            cout << "Pon un numero valido porfis" << endl;
+        }
+
+    } while (opcion != '5');
+
+    return 0;
+}
