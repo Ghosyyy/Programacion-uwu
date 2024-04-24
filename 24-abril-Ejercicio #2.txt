@@ -1,0 +1,36 @@
+public class MyProgram extends ConsoleProgram
+{
+    public void run()
+    {
+        Double n1 = 3.14;
+        Double n2 = 2.8689;
+        Double n3 = 5.85;
+        Double n4 = 4.49;
+        Double n5 = 2.10;
+        Integer n6 = 1945;
+        Integer n7 = 2010;
+        Integer n8 = 218;
+        Integer n9 = 684;
+        
+        System.out.println("de dbl a intgr");
+        Integer entero1 = Double.valueOf(n1).intValue();
+         System.out.println(entero1);
+         Integer entero2 = Double.valueOf(n2).intValue();
+         System.out.println(entero2);
+         Integer entero3 = Double.valueOf(n3).intValue();
+         System.out.println(entero3);
+         Integer entero4 = Double.valueOf(n4).intValue();
+         System.out.println(entero4);
+         Integer entero5 = Double.valueOf(n5).intValue();
+         System.out.println(entero5);
+         
+        System.out.println("De intg a dbl");
+         Double decimal1 = Double.valueOf(n6);
+        System.out.println(decimal1);
+        Double decimal2 = Double.valueOf(n7);
+        System.out.println(decimal2);
+        Double decimal3 = Double.valueOf(n8);
+        System.out.println(decimal3);
+        Double decimal4 = Double.valueOf(n9);
+        System.out.println(decimal4);
+         

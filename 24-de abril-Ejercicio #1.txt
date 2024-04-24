@@ -1,0 +1,24 @@
+public class MyProgram extends ConsoleProgram
+{
+    public void run()
+    {
+        String texto1 = "Holi ";
+        String texto2 = "chavales";
+        Integer numerito = 5;
+        Integer numerito2 = 2;
+        Double decimal = 3.33;
+        boolean real = true;
+
+        System.out.println(texto1 + texto2);
+        
+        Integer suma;
+        System.out.println(numerito + numerito2);
+        
+        Double numeroEjemplo = Double.valueOf(numerito2);
+        System.out.println(numeroEjemplo);
+        
+        Integer numeroEnteroEjemplo = Double.valueOf(decimal).intValue();
+        System.out.println(numeroEnteroEjemplo);
+    }
+}
+
