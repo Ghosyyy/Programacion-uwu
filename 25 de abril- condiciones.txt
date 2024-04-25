@@ -1,0 +1,93 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Pon un numero");
+        
+        int numero = scanner.nextInt();
+
+        if (numero % 2 == 0) {
+            System.out.println("El numero es par");
+        } else {
+            System.out.println("El numero es impar");
+        }
+    }
+}
+
+
+
+
+
+import java.util.Scanner;
+
+public class MyProgram extends ConsoleProgram
+{
+    public void run()
+    {
+         Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingresa tus años de exp: ");
+        
+        Integer edad = scanner.nextInt();
+        
+          if (edad >= 1 && edad <= 5 ) {
+            System.out.print("Principiante");    
+        } 
+        else if (edad <= 10 && edad >= 6){
+            System.out.print("Intermedio");
+        }
+        else if (edad > 10){
+            System.out.print("Experto");
+        }
+
+    }
+}
+
+
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Por favor, ingresa una letra:");
+        String letra = scanner.nextLine();
+
+        if (letra.equalsIgnoreCase("a")) {
+            System.out.println("Ayuda");
+        } else if (letra.equalsIgnoreCase("e")) {
+            System.out.println("Envien");
+        } else if (letra.equalsIgnoreCase("i")) {
+            System.out.println("Inbuprofeno");
+        } else if (letra.equalsIgnoreCase("o")) {
+            System.out.println("Ola");
+        } else if (letra.equalsIgnoreCase("u")) {
+            System.out.println("Unico");
+        } else {
+            System.out.println("Eso no es una vocal.");
+        }
+    }
+}
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Por favor, ingresa un anio:");
+        int ayudita = scanner.nextInt();
+
+        if ((ayudita % 4 == 0) && (ayudita % 100 != 0) || (ayudita % 400 == 0)) {
+            System.out.println("El anio  es bisiesto");
+        } else {
+            System.out.println("El anio no es bisiesto");
+        }
+    }
+}
+
+
+
+
