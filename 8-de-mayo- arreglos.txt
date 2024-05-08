@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+int main(int argc, char *argv[]) {
+	//Arreglos
+	int numeros[5]; // _ , _ , _ , _ , _
+	
+	cout << "Ingresa los numeros: " << endl;
+	
+	for (int i = 0; i < 5; i++) {
+		cout << "Ingrese un numero en la posicion " 
+			<< i << endl;
+		cin >> numeros[i];
+	}
+	
+	for (int i = 0; i < 5; i++) {
+		cout << "Numero ingresado en la posicion " 
+			<< i << ": " << numeros[i];
+	}
+	
+	return 0;
+}
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int numeros[5];
+
+    cout << "Ingresa los numeros \n";
+
+    for (int i = 0; i < 5; i++) {
+        cout << "Poner un numero en la posicion " << i << endl;
+        cin >> numeros[i];
+    }
+    for (int i = 0; i < 5; i++) {
+        cout << "Numero puesto en la posicion " << i << ": " << numeros[i] << endl;
+    }
+
+    
+}
+
+
+
+
