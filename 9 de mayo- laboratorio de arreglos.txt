@@ -1,0 +1,92 @@
+Sumar 5 numeros:
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int numeros[5];
+    int suma = 0;
+    cout << "Pon 5 numeros para sumarlos:\n";
+    for(int i=0; i<5; i++) {
+        cin >> numeros[i];
+        suma += numeros[i];
+    }
+    cout << "Tu suma es de: " << suma << endl;
+    return 0;
+}
+
+Encontrar el numero mayor
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int numeros[5];
+    int elmayor;
+    cout << "Ponte 5 numeros y te dire cual es el mayor wuuu:\n";
+    for (int i = 0; i < 5; i++) {
+        cin >> numeros[i];
+        if (i == 0 || numeros[i] > elmayor) {
+            elmayor = numeros[i];
+        }
+    }
+    cout << "Entre todos el mayor es: " << elmayor << endl;
+    return 0;
+}
+
+
+Promedio:
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    double numeros[5];
+    double suma = 0;
+    cout << "Ingresa 5 numerillos:\n";
+    for (int i = 0; i < 5; i++) {
+        cin >> numeros[i];
+        suma += numeros[i];
+    }
+    double promedio = suma / 5;
+    cout << "El promedio de los numeros es: " << promedio << endl;
+    return 0;
+}
+
+
+Numero de la suerte:
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int numeros[10];
+    int num;
+    bool encontrado = false;
+    cout << "Pls, coloca 10 numeros para hacer una lista:\n";
+    for (int i = 0; i < 10; i++) {
+        cin >> numeros[i];
+    }
+    cout << "Ahora ingrese un numero para buscar:\n";
+    cin >> num;
+    for (int i = 0; i < 10; i++) {
+        if (numeros[i] == num) {
+            encontrado = true;
+            break;
+        }
+    }
+    if (encontrado) {
+        cout << "Felicidades, dios lo bendiga";
+    }
+    else {
+        cout << "Mala suerte, retirese por favor";
+    }
+    return 0;
+}
+
+
+
+
+
+
+
