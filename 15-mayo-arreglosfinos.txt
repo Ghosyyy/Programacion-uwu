@@ -1,0 +1,102 @@
+#include <iostream>
+using namespace std;
+
+void mayoramenor(int arr[], int size) {
+    for (int i = size - 1; i >= 0; i--) {
+        cout << "Poner elementos " << i << ": ";
+        cin >> arr[i];
+    }
+}
+
+void clonararreglo(int src[], int dst[], int size) {
+    for (int i = 0; i < size; i++) {
+        dst[i] = src[i];
+    }
+}
+
+void hacerlopositivo(int arr[], int size) {
+    for (int i = 0; i < size; i++) {
+        if (arr[i] < 0) {
+            arr[i] = -arr[i];
+        }
+    }
+}
+
+void decimales(double decimalArr[], int intPart[], double fracPart[], int size) {
+    for (int i = 0; i < size; i++) {
+        intPart[i] = static_cast<int>(decimalArr[i]);
+        fracPart[i] = decimalArr[i] - intPart[i];
+    }
+}
+
+int main() {
+    int opciones;
+    do {
+        cout << "\n1. Arreglo de mayor a menor\n";
+        cout << "2. Clonar un arreglo\n";
+        cout << "3. Pasar todo negativo a positivo wuuu\n";
+        cout << "4. Separar tu numero entero de la parte decimal\n";
+        cout << "5. Irte, chao\n";
+        cout << "Elige porfis ";
+        cin >> opciones;
+        int arr1[10], arr2[10];
+        double arreglodecimal[5];
+        int partentera[5];
+        double partedecimal[5];
+        switch (opciones) {
+        case 1:
+            mayoramenor(arr1, 10);
+            cout << "Arreglos ordenados:";
+            for (int i = 0; i < 10; i++) {
+                cout << arr1[i] << " ";
+            }
+            cout << endl;
+            break;
+        case 2:
+            cout << "Pon 10 arreglos o numeros: ";
+            for (int i = 0; i < 10; i++) {
+                cin >> arr1[i];
+            }
+            clonararreglo(arr1, arr2, 10);
+            cout << "arreglo: ";
+            for (int i = 0; i < 10; i++) {
+                cout << arr1[i] << " ";
+            }
+            cout << "\nArreglo clonado wuuu: ";
+            for (int i = 0; i < 10; i++) {
+                cout << arr2[i] << " ";
+            }
+            cout << endl;
+            break;
+        case 3:
+            cout << "Pon 10 numeros: ";
+            for (int i = 0; i < 10; i++) {
+                cin >> arr1[i];
+            }
+            hacerlopositivo(arr1, 10);
+            cout << "Arreglo con los negativos hacia positivos: ";
+            for (int i = 0; i < 10; i++) {
+                cout << arr1[i] << " ";
+            }
+            cout << endl;
+            break;
+        case 4:
+            cout << "Pon 5 numeros decimales: ";
+            for (int i = 0; i < 5; i++) {
+                cin >> arreglodecimal[i];
+            }
+            decimales(arreglodecimal, partentera, partedecimal, 5);
+            cout << "Parte entera uwu: ";
+            for (int i = 0; i < 5; i++) {
+                cout << partedecimal[i] << " ";
+            }
+            cout << "\nParte decimal owo: ";
+            for (int i = 0; i < 5; i++) {
+                cout << partedecimal[i] << " ";
+            }
+            cout << endl; 
+            break;
+        }
+    } while (opciones != 5);
+    return 0;
+}
