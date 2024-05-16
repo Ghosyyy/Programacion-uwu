@@ -1,0 +1,71 @@
+Cifrado #1:
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int contrasenaNumerica, factorCifrado, contrasenaCifrada;
+
+    cout << "Ingrese una contrasenia pero de numeros pls pq no programe las letras XD: ";
+    cin >> contrasenaNumerica;
+
+
+    cout << "Ahora un numero para cifrarlo: ";
+    cin >> factorCifrado;
+
+    contrasenaCifrada = (contrasenaNumerica + factorCifrado) * factorCifrado;
+
+ 
+    cout << "Contrasenia original: " << contrasenaNumerica << endl;
+    cout << "Numero cifrado: " << factorCifrado << endl;
+    cout << "Suma: " << contrasenaNumerica << " + " << factorCifrado << " = " << contrasenaNumerica + factorCifrado << endl;
+    cout << " Multiplicar: " << contrasenaNumerica + factorCifrado << " * " << factorCifrado << " = " << contrasenaCifrada << endl;
+    cout << "Tu contrasenia cifrada: " << contrasenaCifrada << endl;
+
+    return 0;
+
+
+Cifrado #2:
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+string cifrar(const string& cadena) {
+	string resultado = cadena;
+	int longitud = resultado.length(); 
+
+	for (int i = 0; i < longitud; i++) {
+		char caracter = resultado[i];
+		if (caracter == 'i' || caracter == 'I') {
+			resultado[i] = '1';
+		}
+		if (caracter == 'e' || caracter == 'E') {
+			resultado[i] = '3';
+		}
+		if (caracter == 'a' || caracter == 'A') {
+			resultado[i] = '4';
+		}
+		if (caracter == 'o' || caracter == 'O') {
+			resultado[i] = '0';
+
+		}
+		if (caracter == 'u' || caracter == 'U') {
+			resultado[i] = '*';
+
+		}
+	}
+
+	return resultado;
+}   int main() {
+	string frase, fraseTuneada;
+	cout << "Ingrese una frase para cifrarla: ";
+    
+	getline(cin, frase);
+	fraseTuneada = cifrar(frase);
+	cout << endl << "Frase curseada: " << fraseTuneada;
+	return 0;
+}
+
+
+
